@@ -1408,7 +1408,9 @@ add_gpus([
         GPUId(chip_id=0x44050001, name="Adreno (TM) 830"), # KGSL
     ], A6xxGPUInfo(
         CHIP.A8XX,
-        [a7xx_base, a7xx_gen3, a8xx_base, a8xx_gen1],
+        [a7xx_base, a7xx_gen3, a8xx_base, a8xx_gen1, GPUProps(
+            enable_tp_ubwc_flag_hint = True,
+        )],
         num_ccu = 6,
         num_slices = 3,
         tile_align_w = 96,
